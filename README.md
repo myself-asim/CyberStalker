@@ -1,3 +1,5 @@
+This Is CyberStalker AN OpenSource Tool To Automate SCAN OF NMAP, GOBUSTER, AND SO ON.
+
 REQUIRED PACKAGES NEEDS TO BE INSTALLED ON YOUR SYSTEM
 
 For Debian/Ubuntu Based Systems:
