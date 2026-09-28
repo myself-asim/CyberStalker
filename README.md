@@ -4,11 +4,11 @@ CyberStalker is an open-source automated reconnaissance framework designed to st
 
 REQUIRED PACKAGES NEEDS TO BE INSTALLED ON YOUR SYSTEM
 For Debian/Ubuntu Based Systems:
-sudo apt install nmap
+sudo apt install nmap,
 sudo apt install gobuster
 
 For Arch Based Systems:
-sudo pacman -S nmap
+sudo pacman -S nmap,
 sudo pacman -S gobuster
 
 The Program Expects You To Have common.txt at /usr/share/wordlists/dirb/common.txt
