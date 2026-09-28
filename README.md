@@ -1,4 +1,6 @@
-This Is CyberStalker AN OpenSource Tool To Automate SCAN OF NMAP, GOBUSTER, AND SO ON.
+🕷️ CyberStalker
+
+CyberStalker is an open-source automated reconnaissance framework designed to streamline network discovery and web content enumeration. By pairing the host and service discovery power of Nmap with the high-speed directory and subdomain brute-forcing of Gobuster, CyberStalker automates the initial phases of penetration testing into a single, cohesive workflow.
 
 REQUIRED PACKAGES NEEDS TO BE INSTALLED ON YOUR SYSTEM
 
