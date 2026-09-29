@@ -35,9 +35,6 @@ def arguments():
         print(f"INSUFFIIECENT ARGUMENT RECIEVED")
         print(f"RUN IT LIKE THIS : python3 Recon.py Target URL")
 
-def main():
-    pass
-
 def header():
     print("============================================================================")
     print("Cyber Stalker - Best Reconnaissance Tool By Muhammad Asim - RNDx3")
