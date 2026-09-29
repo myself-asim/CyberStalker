@@ -1,6 +1,6 @@
-🕷️ CyberStalker
+🕷️ One-Eye
 
-CyberStalker is an open-source automated reconnaissance framework designed to streamline network discovery and web content enumeration. By pairing the host and service discovery power of Nmap with the high-speed directory and subdomain brute-forcing of Gobuster, CyberStalker automates the initial phases of penetration testing into a single, cohesive workflow.
+One-Eye is an open-source automated reconnaissance framework designed to streamline network discovery and web content enumeration. By pairing the host and service discovery power of Nmap with the high-speed directory and subdomain brute-forcing of Gobuster, One-Eye automates the initial phases of penetration testing into a single, cohesive workflow.
 
 REQUIRED PACKAGES NEEDS TO BE INSTALLED ON YOUR SYSTEM
 For Debian/Ubuntu Based Systems:
