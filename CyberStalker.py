@@ -9,7 +9,7 @@ def runSCAN(target, url):
 
 
     for i in range(0, 3):
-        print(f"{ARR_TOOL[0]} SCAN INITIALIZED => ", end="")
+        print(f"{ARR_TOOL[i]} SCAN INITIALIZED => ", end="")
         scan = subprocess.run(ARR_COMMAND[i], shell=True, capture_output=True)
         if (scan.returncode != 0):
             print(f"THERE IS SOME ISSUE WHIILE RUNNING {ARR_TOOL[i]} AUTOMATED SCAN")
