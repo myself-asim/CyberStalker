@@ -1,29 +1,27 @@
 import subprocess, sys, os
 
-def runNMAP(target):
-    ports = "-p 1-1024"
-    print("NMAP SCAN INITIALIZED => ", end="")
-    scan = subprocess.run(f"nmap -sSCV {target} {ports} > RECON.txt", shell=True, capture_output=True)
-    if (scan.returncode != 0):
-        print(f"THERE IS SOME ISSUE WHIILE RUNNING NMAP AUTOMATED SCAN")
-        print(f"EXCEPTION IS : subprocess.CalledProcessError()")
-        sys.exit()
-    else:
-        print("NMAP SCAN HAS BEEN COMPLETED")
+def runSCAN(target, url):
+    STACK = [target, url]
+    ARR_COMMAND = [f"nmap -sSCV {target} > RECON.txt",
+                f"gobuster  dir -u {url} -w /usr/share/wordlists/seclists/Discovery/Web-Content/common.txt > GOBUSTER.txt -t 50"]
+    ARR_TOOL = ["NMAP", "GOBUSTER"]
 
-def runGOBUSTER(target):
-    print("GOBUSTER SCAN INITIALIZED => ", end="")
-    scan = subprocess.run(f"gobuster dir -u {target} -w /usr/share/wordlists/dirb/common.txt > GOBUSTER.txt", shell=True, capture_output=True)
-    if (scan.returncode != 0):
-        print(f"THERE IS SOME ISSUE WHIILE RUNNING GOBUSTER AUTOMATED SCAN")
-        print(f"EXCEPTION IS : subprocess.CalledProcessError()")
-        sys.exit()
-    else:
-        print("GOBUSTER SCAN HAS BEEN COMPLETED")
+
+    for i in range(0, 2):
+        print(f"{ARR_TOOL[0]} SCAN INITIALIZED => ", end="")
+        scan = subprocess.run(ARR_COMMAND[i], shell=True, capture_output=True)
+        if (scan.returncode != 0):
+            print(f"THERE IS SOME ISSUE WHIILE RUNNING {ARR_TOOL[i]} AUTOMATED SCAN")
+            print(f"EXCEPTION IS : subprocess.CalledProcessError()")
+            sys.exit()
+        
+        print(f"{ARR_TOOL[i]} SCAN HAS BEEN COMPLETED")
+
+    print("============================================================================")
 
 def arguments():
     try:
-        if len(sys.argv) > 1:
+        if len(sys.argv) == 3:
             cwd = os.getcwd()
             URL = sys.argv[2]
             TARGET = sys.argv[1]
@@ -32,17 +30,18 @@ def arguments():
             print(f"URL : {URL}")
             print("============================================================================")
 
-            runNMAP(TARGET)
-            runGOBUSTER(URL)
+            runSCAN(TARGET, URL)
     except:
         print(f"INSUFFIIECENT ARGUMENT RECIEVED")
         print(f"RUN IT LIKE THIS : python3 Recon.py Target URL")
 
+def main():
+    pass
+
 def header():
     print("============================================================================")
-    print("Best Reconnaissance Tool By Muhammad Asim - RNDx3")
+    print("Cyber Stalker - Best Reconnaissance Tool By Muhammad Asim - RNDx3")
     print("============================================================================")
 
 header()
 arguments()
-print("============================================================================")
