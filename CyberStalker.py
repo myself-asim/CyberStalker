@@ -5,7 +5,7 @@ def runSCAN(target, url):
     ARR_COMMAND = [f"nmap -sSCV {target} > RECON.txt",
                 f"gobuster  dir -u {url} -w /usr/share/wordlists/seclists/Discovery/Web-Content/common.txt > GOBUSTER.txt -t 50",
                 f"sublist3r -d {target} > SUBLIST3R.txt"]
-    ARR_TOOL = ["NMAP", "GOBUSTER", "SUBLIST3R"]
+    ARR_TOOL = ["NMAP", "GOBUSTER", "SUBLIST3R"] 
 
 
     for i in range(0, 3):
